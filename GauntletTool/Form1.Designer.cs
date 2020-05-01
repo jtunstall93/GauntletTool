@@ -69,8 +69,8 @@
 			this.Gear_Box.ForeColor = System.Drawing.SystemColors.Window;
 			this.Gear_Box.FormattingEnabled = true;
 			this.Gear_Box.Items.AddRange(new object[] {
-            "Weapon 1",
-            "Weapon 2",
+            "T3 Weapon 1",
+            "T3 Weapon 2",
             "T3 Chest",
             "T2 Legs",
             "T2 Helm",
@@ -79,7 +79,7 @@
             "Teleport"});
 			this.Gear_Box.Location = new System.Drawing.Point(13, 195);
 			this.Gear_Box.Name = "Gear_Box";
-			this.Gear_Box.Size = new System.Drawing.Size(92, 124);
+			this.Gear_Box.Size = new System.Drawing.Size(101, 124);
 			this.Gear_Box.TabIndex = 0;
 			this.Gear_Box.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.Gear_Box_ItemCheck);
 			// 
@@ -212,7 +212,7 @@
             "Orb (Staff)",
             "Spike (Halberd)",
             "Bowstring (Bow)"});
-			this.T3_Wep_Attachment.Location = new System.Drawing.Point(111, 195);
+			this.T3_Wep_Attachment.Location = new System.Drawing.Point(120, 195);
 			this.T3_Wep_Attachment.Name = "T3_Wep_Attachment";
 			this.T3_Wep_Attachment.Size = new System.Drawing.Size(104, 49);
 			this.T3_Wep_Attachment.TabIndex = 14;

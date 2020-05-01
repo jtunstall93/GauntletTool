@@ -1,0 +1,9 @@
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Release\GauntletTool.Form1.resources
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Release\GauntletTool.Properties.Resources.resources
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Release\GauntletTool.csproj.GenerateResource.cache
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Release\GauntletTool.csproj.CoreCompileInputs.cache
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\bin\Release\GauntletTool.exe.config
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\bin\Release\GauntletTool.exe
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\bin\Release\GauntletTool.pdb
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Release\GauntletTool.exe
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Release\GauntletTool.pdb
