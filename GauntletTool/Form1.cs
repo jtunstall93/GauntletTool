@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace GauntletTool
 {
@@ -15,7 +16,7 @@ namespace GauntletTool
 		public Form1()
 		{
 			InitializeComponent();
-
+			LoadCustomBoundsOnStart();
 		}
 
 		private void WF_Count_ValueChanged(object sender, EventArgs e)
@@ -53,22 +54,6 @@ namespace GauntletTool
 			Shard_Bar.Value = Progress_Adjust((int)Shard_Count.Value, Shard_Bar.Maximum, Shard_Bar.Minimum, Shard_Bar.Value);
 		}
 
-		/// <summary>
-		/// Function to compare and set progress bar values.
-		/// </summary>
-		/// <param name="iCount">The current count of the corresponding number bar value.</param>
-		/// <param name="progMax">The maximum value of the progress bar.</param>
-		/// <param name="progMin">The minimum value of the progress bar.</param>
-		/// <param name="pCount">The current value of the progress bar.</param>
-		/// <returns></returns>
-		private int Progress_Adjust(int iCount, int progMax, int progMin, int pCount)
-		{
-			if (iCount <= progMax && iCount >= progMin)
-				return iCount;
-			else
-				return pCount;
-		}
-
 		private void Gear_Box_ItemCheck(object sender, ItemCheckEventArgs e)
 		{
 			int checkCount = 0;
@@ -84,7 +69,7 @@ namespace GauntletTool
 			else
 				checkCount -= 1;
 
-			if (checkCount == 8 && T3_Wep_Attachment.CheckedItems.Count >= 2)
+			if (checkCount == Gear_Box.Items.Count && T3_Wep_Attachment.CheckedItems.Count >= 2)
 				label8.Visible = true;
 			else
 				label8.Visible = false;
@@ -105,7 +90,7 @@ namespace GauntletTool
 			else
 				checkCount -= 1;
 
-			if (checkCount >= 2 && Gear_Box.CheckedItems.Count == 8)
+			if (checkCount >= 2 && Gear_Box.CheckedItems.Count == Gear_Box.Items.Count)
 				label8.Visible = true;
 			else
 				label8.Visible = false;
@@ -139,6 +124,66 @@ namespace GauntletTool
 
 			Shard_Count.Value = 0;
 			Shard_Bar.Value = 0;
+		}
+
+		private void customBoundsButton_Click(object sender, EventArgs e)
+		{
+			Form2 customBoundsForm = new Form2(this);
+			customBoundsForm.Activate();
+			customBoundsForm.ShowDialog();
+		}
+
+		/// <summary>
+		/// Function to compare and set progress bar values.
+		/// </summary>
+		/// <param name="iCount">The current count of the corresponding number bar value.</param>
+		/// <param name="progMax">The maximum value of the progress bar.</param>
+		/// <param name="progMin">The minimum value of the progress bar.</param>
+		/// <param name="pCount">The current value of the progress bar.</param>
+		/// <returns></returns>
+		private int Progress_Adjust(int iCount, int progMax, int progMin, int pCount)
+		{
+			if (iCount <= progMax && iCount >= progMin)
+				return iCount;
+			else
+				return pCount;
+		}
+
+		/// <summary>
+		/// This function will check for a custom.txt file in the prefs folder, and if it finds one, will load in the values saved there.
+		/// </summary>
+		private void LoadCustomBoundsOnStart()
+		{
+			string filePath = Directory.GetCurrentDirectory();
+			filePath += "\\prefs\\custom.txt";
+
+			if (File.Exists(filePath))
+			{
+
+				StreamReader reader = new StreamReader(filePath);
+				WF_Bar.Minimum = Convert.ToInt32(reader.ReadLine());
+				WF_Bar.Maximum = Convert.ToInt32(reader.ReadLine());
+				//
+				Ore_Bar.Minimum = Convert.ToInt32(reader.ReadLine());
+				Ore_Bar.Maximum = Convert.ToInt32(reader.ReadLine());
+				//
+				Bark_Bar.Minimum = Convert.ToInt32(reader.ReadLine());
+				Bark_Bar.Maximum = Convert.ToInt32(reader.ReadLine());
+				//
+				Wool_Bar.Minimum = Convert.ToInt32(reader.ReadLine());
+				Wool_Bar.Maximum = Convert.ToInt32(reader.ReadLine());
+				//
+				GL_Bar.Minimum = Convert.ToInt32(reader.ReadLine());
+				GL_Bar.Maximum = Convert.ToInt32(reader.ReadLine());
+				//
+				Food_Bar.Minimum = Convert.ToInt32(reader.ReadLine());
+				Food_Bar.Maximum = Convert.ToInt32(reader.ReadLine());
+				//
+				Shard_Bar.Minimum = Convert.ToInt32(reader.ReadLine());
+				Shard_Bar.Maximum = Convert.ToInt32(reader.ReadLine());
+
+				reader.Close();
+			}
 		}
 	}
 }

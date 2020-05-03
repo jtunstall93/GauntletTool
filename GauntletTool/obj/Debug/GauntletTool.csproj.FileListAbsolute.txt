@@ -8,3 +8,15 @@ C:\Users\Jess\source\repos\GauntletTool\GauntletTool\obj\Debug\GauntletTool.cspr
 C:\Users\Jess\source\repos\GauntletTool\GauntletTool\obj\Debug\GauntletTool.csproj.CoreCompileInputs.cache
 C:\Users\Jess\source\repos\GauntletTool\GauntletTool\obj\Debug\GauntletTool.exe
 C:\Users\Jess\source\repos\GauntletTool\GauntletTool\obj\Debug\GauntletTool.pdb
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\bin\Debug\GauntletTool.exe.config
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\bin\Debug\GauntletTool.exe
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\bin\Debug\GauntletTool.pdb
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Debug\GauntletTool.csprojAssemblyReference.cache
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Debug\GauntletTool.Form1.resources
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Debug\GauntletTool.Form2.resources
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Debug\GauntletTool.Properties.Resources.resources
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Debug\GauntletTool.csproj.GenerateResource.cache
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Debug\GauntletTool.csproj.CoreCompileInputs.cache
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Debug\GauntletTool.exe
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Debug\GauntletTool.pdb
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Debug\GauntletTool.Form3.resources

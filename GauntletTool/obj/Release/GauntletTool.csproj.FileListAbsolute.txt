@@ -7,3 +7,5 @@ C:\Users\Jess\Desktop\GauntletTool\GauntletTool\bin\Release\GauntletTool.exe
 C:\Users\Jess\Desktop\GauntletTool\GauntletTool\bin\Release\GauntletTool.pdb
 C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Release\GauntletTool.exe
 C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Release\GauntletTool.pdb
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Release\GauntletTool.csprojAssemblyReference.cache
+C:\Users\Jess\Desktop\GauntletTool\GauntletTool\obj\Release\GauntletTool.Form2.resources

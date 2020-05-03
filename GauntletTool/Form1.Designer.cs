@@ -54,6 +54,7 @@
 			this.Shard_Bar = new System.Windows.Forms.ProgressBar();
 			this.label8 = new System.Windows.Forms.Label();
 			this.ResetButton = new System.Windows.Forms.Button();
+			this.customBoundsButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.WF_Count)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Ore_Count)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Bark_Count)).BeginInit();
@@ -69,17 +70,16 @@
 			this.Gear_Box.ForeColor = System.Drawing.SystemColors.Window;
 			this.Gear_Box.FormattingEnabled = true;
 			this.Gear_Box.Items.AddRange(new object[] {
-            "T3 Weapon 1",
-            "T3 Weapon 2",
-            "T3 Chest",
-            "T2 Legs",
-            "T2 Helm",
+            "Weapon 1",
+            "Weapon 2",
+            "Chest",
+            "Legs",
+            "Helm",
             "Food",
-            "Eggnog",
-            "Teleport"});
+            "Eggnog"});
 			this.Gear_Box.Location = new System.Drawing.Point(13, 195);
 			this.Gear_Box.Name = "Gear_Box";
-			this.Gear_Box.Size = new System.Drawing.Size(101, 124);
+			this.Gear_Box.Size = new System.Drawing.Size(101, 109);
 			this.Gear_Box.TabIndex = 0;
 			this.Gear_Box.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.Gear_Box_ItemCheck);
 			// 
@@ -305,7 +305,7 @@
 			this.label8.AutoSize = true;
 			this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label8.ForeColor = System.Drawing.Color.Aqua;
-			this.label8.Location = new System.Drawing.Point(173, 268);
+			this.label8.Location = new System.Drawing.Point(113, 253);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(116, 37);
 			this.label8.TabIndex = 24;
@@ -317,7 +317,7 @@
 			this.ResetButton.BackColor = System.Drawing.SystemColors.WindowFrame;
 			this.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.ResetButton.ForeColor = System.Drawing.SystemColors.Window;
-			this.ResetButton.Location = new System.Drawing.Point(230, 210);
+			this.ResetButton.Location = new System.Drawing.Point(230, 256);
 			this.ResetButton.Name = "ResetButton";
 			this.ResetButton.Size = new System.Drawing.Size(100, 34);
 			this.ResetButton.TabIndex = 25;
@@ -325,12 +325,26 @@
 			this.ResetButton.UseVisualStyleBackColor = false;
 			this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
 			// 
+			// customBoundsButton
+			// 
+			this.customBoundsButton.BackColor = System.Drawing.SystemColors.WindowFrame;
+			this.customBoundsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.customBoundsButton.ForeColor = System.Drawing.SystemColors.Window;
+			this.customBoundsButton.Location = new System.Drawing.Point(230, 210);
+			this.customBoundsButton.Name = "customBoundsButton";
+			this.customBoundsButton.Size = new System.Drawing.Size(100, 34);
+			this.customBoundsButton.TabIndex = 26;
+			this.customBoundsButton.Text = "Custom Bounds";
+			this.customBoundsButton.UseVisualStyleBackColor = false;
+			this.customBoundsButton.Click += new System.EventHandler(this.customBoundsButton_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.ClientSize = new System.Drawing.Size(345, 331);
+			this.ClientSize = new System.Drawing.Size(345, 311);
+			this.Controls.Add(this.customBoundsButton);
 			this.Controls.Add(this.ResetButton);
 			this.Controls.Add(this.label8);
 			this.Controls.Add(this.Shard_Bar);
@@ -398,6 +412,7 @@
 		private System.Windows.Forms.ProgressBar Shard_Bar;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Button ResetButton;
+		private System.Windows.Forms.Button customBoundsButton;
 	}
 }
 
