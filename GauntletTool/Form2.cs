@@ -28,7 +28,11 @@ namespace GauntletTool
 				&& Wool_Min.Value < Wool_Max.Value && GL_Min.Value < GL_Max.Value && Food_Min.Value < Food_Max.Value && Shards_Min.Value < Shards_Max.Value)
 			{
 				string filePath = Directory.GetCurrentDirectory();
-				filePath += "\\prefs\\custom.txt";
+				filePath += "\\prefs";
+
+				Directory.CreateDirectory(filePath);
+
+				filePath += "\\custom.txt";
 
 				StreamWriter writer = new StreamWriter(filePath);
 
@@ -60,7 +64,7 @@ namespace GauntletTool
 
 				values = true;
 
-				Form3 valuesSavedForm = new Form3(this);
+				Form3 valuesSavedForm = new Form3(this, false);
 				valuesSavedForm.Activate();
 				valuesSavedForm.ShowDialog();
 
@@ -69,7 +73,7 @@ namespace GauntletTool
 			else
 			{
 				values = false;
-				Form3 invalidValuesForm = new Form3(this);
+				Form3 invalidValuesForm = new Form3(this, false);
 				invalidValuesForm.Activate();
 				invalidValuesForm.ShowDialog();
 			}
@@ -78,33 +82,45 @@ namespace GauntletTool
 		private void DefaultValuesButton_Click(object sender, EventArgs e)
 		{
 			string filePath = Directory.GetCurrentDirectory();
-			filePath += "\\prefs\\default.txt";
 
-			StreamReader reader = new StreamReader(filePath);
-			//
-			WF_Min.Value = Convert.ToInt32(reader.ReadLine());
-			WF_Max.Value = Convert.ToInt32(reader.ReadLine());
-			//
-			Ore_Min.Value = Convert.ToInt32(reader.ReadLine());
-			Ore_Max.Value = Convert.ToInt32(reader.ReadLine());
-			//
-			Bark_Min.Value = Convert.ToInt32(reader.ReadLine());
-			Bark_Max.Value = Convert.ToInt32(reader.ReadLine());
-			//
-			Wool_Min.Value = Convert.ToInt32(reader.ReadLine());
-			Wool_Max.Value = Convert.ToInt32(reader.ReadLine());
-			//
-			GL_Min.Value = Convert.ToInt32(reader.ReadLine());
-			GL_Max.Value = Convert.ToInt32(reader.ReadLine());
-			//
-			Food_Min.Value = Convert.ToInt32(reader.ReadLine());
-			Food_Max.Value = Convert.ToInt32(reader.ReadLine());
-			//
-			Shards_Min.Value = Convert.ToInt32(reader.ReadLine());
-			Shards_Max.Value = Convert.ToInt32(reader.ReadLine());
+			filePath += "\\prefs";
 
-			reader.Close();
-			ChangeProgressBounds();
+			Directory.CreateDirectory(filePath);
+
+			filePath += "\\default.txt";
+
+			if (File.Exists(filePath))
+			{
+				StreamReader reader = new StreamReader(filePath);
+				//
+				WF_Min.Value = Convert.ToInt32(reader.ReadLine());
+				WF_Max.Value = Convert.ToInt32(reader.ReadLine());
+				//
+				Ore_Min.Value = Convert.ToInt32(reader.ReadLine());
+				Ore_Max.Value = Convert.ToInt32(reader.ReadLine());
+				//
+				Bark_Min.Value = Convert.ToInt32(reader.ReadLine());
+				Bark_Max.Value = Convert.ToInt32(reader.ReadLine());
+				//
+				Wool_Min.Value = Convert.ToInt32(reader.ReadLine());
+				Wool_Max.Value = Convert.ToInt32(reader.ReadLine());
+				//
+				GL_Min.Value = Convert.ToInt32(reader.ReadLine());
+				GL_Max.Value = Convert.ToInt32(reader.ReadLine());
+				//
+				Food_Min.Value = Convert.ToInt32(reader.ReadLine());
+				Food_Max.Value = Convert.ToInt32(reader.ReadLine());
+				//
+				Shards_Min.Value = Convert.ToInt32(reader.ReadLine());
+				Shards_Max.Value = Convert.ToInt32(reader.ReadLine());
+
+				reader.Close();
+				ChangeProgressBounds();
+
+				Form3 valuesSavedForm = new Form3(this, true);
+				valuesSavedForm.Activate();
+				valuesSavedForm.ShowDialog();
+			}
 		}
 
 		public bool GetValues() { return values; }

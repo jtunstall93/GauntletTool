@@ -16,6 +16,7 @@ namespace GauntletTool
 		public Form1()
 		{
 			InitializeComponent();
+			DefaultBackup();
 			LoadCustomBoundsOnStart();
 		}
 
@@ -184,6 +185,47 @@ namespace GauntletTool
 
 				reader.Close();
 			}
+		}
+
+		private void DefaultBackup()
+		{
+			string filePath = Directory.GetCurrentDirectory();
+
+			filePath += "\\prefs";
+
+			Directory.CreateDirectory(filePath);
+
+			filePath += "\\default.txt";
+
+			if (!File.Exists(filePath))
+			{
+				StreamWriter writer = new StreamWriter(filePath);
+
+				writer.WriteLine(WF_Bar.Minimum);
+				writer.WriteLine(WF_Bar.Maximum);
+				//
+				writer.WriteLine(Ore_Bar.Minimum);
+				writer.WriteLine(Ore_Bar.Maximum);
+				//
+				writer.WriteLine(Bark_Bar.Minimum);
+				writer.WriteLine(Bark_Bar.Maximum);
+				//
+				writer.WriteLine(Wool_Bar.Minimum);
+				writer.WriteLine(Wool_Bar.Maximum);
+				//
+				writer.WriteLine(GL_Bar.Minimum);
+				writer.WriteLine(GL_Bar.Maximum);
+				//
+				writer.WriteLine(Food_Bar.Minimum);
+				writer.WriteLine(Food_Bar.Maximum);
+				//
+				writer.WriteLine(Shard_Bar.Minimum);
+				writer.WriteLine(Shard_Bar.Maximum);
+
+				writer.Close();
+			}
+
+
 		}
 	}
 }

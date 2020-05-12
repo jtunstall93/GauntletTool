@@ -14,7 +14,7 @@ namespace GauntletTool
 	{
 		private Form2 parent;
 
-		public Form3(Form2 p)
+		public Form3(Form2 p, bool def)
 		{
 			InitializeComponent();
 			parent = p;
@@ -23,6 +23,9 @@ namespace GauntletTool
 				valuesLabel.Text = "Values assigned.";
 			else
 				valuesLabel.Text = "Invalid values.";
+
+			if (def)
+				valuesLabel.Text = "Values assigned.";
 			
 		}
 
