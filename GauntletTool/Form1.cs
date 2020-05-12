@@ -156,7 +156,11 @@ namespace GauntletTool
 		private void LoadCustomBoundsOnStart()
 		{
 			string filePath = Directory.GetCurrentDirectory();
-			filePath += "\\prefs\\custom.txt";
+			filePath += "\\prefs";
+
+			Directory.CreateDirectory(filePath);
+
+			filePath += "\\custom.txt";
 
 			if (File.Exists(filePath))
 			{
@@ -186,6 +190,7 @@ namespace GauntletTool
 				reader.Close();
 			}
 		}
+
 
 		private void DefaultBackup()
 		{
